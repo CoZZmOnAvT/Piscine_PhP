@@ -1,0 +1,44 @@
+<!--
+                                                          :::      ::::::::
+     game.html                                          :+:      :+:    :+:
+                                                      +:+ +:+         +:+
+     By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+
+                                                  +#+#+#+#+#+   +#+
+     Created: 2018/01/26 13:32:41 by pgritsen          #+#    #+#
+     Updated: 2018/01/26 20:42:20 by pgritsen         ###   ########.fr
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Warhammer</title>
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/resources/game.css">
+		<link href="https://fonts.googleapis.com/css?family=UnifrakturCook:700" rel="stylesheet">
+	</head>
+	<body onload="game.getData();">
+		<div id="game-logo" onclick="game.getData();">
+			<img src="/resources/logo.png" />
+			<br />
+			<h1>Awesome Starships Battles In The Dark Grim Future Of The Grim Dark 41st Millenium</h1>
+		</div>
+		<div id="battlefield">
+			<img class="queue left player1 active" src="/resources/active.png" />
+			<img class="queue right player2" src="/resources/active.png" />
+			<img id="border" src="/resources/game_border.png" />
+			<canvas></canvas>
+		</div>
+		<div class="controlls">
+			<div class="arrows">
+				<p style="margin-bottom: 5px;"><button class="top">&#8593;</button></p>
+				<button class="left">&#8592;</button>
+				<button class="bottom">&#8595;</button>
+				<button class="right">&#8594;</button>
+			</div>			
+			<button class="shoot">Shoot</button>
+		</div>
+		<button id="restart" onclick="game.restart();">Restart</button>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="/resources/game.js"></script>
+	</body>
+</html>

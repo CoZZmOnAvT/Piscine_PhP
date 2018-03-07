@@ -1,0 +1,278 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	min-height: 100%;
+	min-width: 1300px;
+}
+
+body {	
+	background: url("/resources/background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#game-logo {
+	margin: 20px auto 0;
+	text-align: center;
+}
+
+#game-logo img {
+	width: 600px;
+}
+
+#game-logo h1 {
+	display: inline-block;
+	font-family: 'UnifrakturCook', cursive;
+	font-size: 35px;
+	color: #99bda5;
+	-webkit-text-stroke: 1px #000;
+}
+
+#battlefield {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin: 0 auto;	
+	width: 1250px;
+	height: 850px;
+}
+
+#battlefield .queue {
+	position: absolute;
+	z-index: 2;
+	display: none;
+}
+
+#battlefield .queue.active {
+	display: block;
+}
+
+#battlefield .queue.left {
+	left: -210px;
+	top: -73px;
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+
+#battlefield .queue.right {	
+	right: -210px;
+	top: -73px;
+}
+
+#battlefield #border {
+	border-radius: 10px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#battlefield canvas {
+	padding-top: 5px;
+	width: 1140px;
+	height: 755px;
+	background: #fff;
+}
+
+#controlls *::selection {
+	background-color: transparent;
+}
+
+#controlls {
+	width: 1250px;
+	height: 110px;
+	margin: 20px auto;
+	text-align: center;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	flex-shrink: 1;
+	font: 16px Tahoma;
+}
+
+#controlls button {
+	background-color: #5f2725;
+	border: 3px solid #fff;
+	color: #fff;
+	cursor: pointer;
+	outline: none;
+	transition: 0.1s linear;
+}
+
+#controlls button:active {
+	transform: scale(1.4);
+}
+
+#controlls .arrows button {
+	width: 50px;
+	height: 50px;	
+}
+
+#controlls .shoot {
+	margin-left: 40px;
+	width: 400px;
+	font-size: 32px;
+}
+
+#controlls .shoot:active {
+	transform: scale(1.1);
+}
+
+#restart {
+	display: block;
+	margin: 5px auto;
+	width: 1250px;
+	height: 50px;
+	transition: 0.1s linear;
+	outline: none;
+	background-color: #5f2725;
+	border: 3px solid #3e0f0e;
+	color: #fff;
+	font-size: 28px;
+	font-family: Impact;
+	-webkit-text-stroke: 1px #000;
+	cursor: pointer;
+}
+
+#restart:active {
+	margin-top: 30px;
+}
+
+.auth-form {
+	min-width: 400px;
+	width: 20%;
+	margin: 80px auto 20px;
+	border: 1px solid #bababa;
+	padding: 30px;
+	box-sizing: border-box;
+	text-align:  center;
+	background-color: #282828;
+	-webkit-box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.5);
+}
+
+.auth-form .error-msg {
+	font: 12px Tahoma;
+	color: #ed004c;
+	margin-bottom: 10px;
+}
+
+.auth-form .header {
+	margin: 10px 0 40px;
+	color: #fff;
+}
+
+.auth-form input {
+	margin: 5px 0;
+	padding: 0 25px;
+	height: 40px;
+	width: 100%;
+	border: 1px solid #bababa;
+	border-radius: 0;
+	box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+	outline: none;
+	box-sizing: border-box;
+}
+
+.auth-form input[type="submit"] {
+	cursor: pointer;
+	background-color: #ed004c;
+	color: #fff;
+	border:  none;
+}
+
+.auth-form a {
+	float: left;
+	color: #fff;
+	text-decoration: none;
+	font-size: 10px;
+	border-bottom: 1px solid #bababa;
+	padding: 2px 0;
+}
+
+.lobby {
+	text-align: center;
+	background-color: #505050;
+	margin: 0 auto;
+	width: 300px;
+	height: 500px;
+	margin-top: 200px;
+	border-radius: 13px;
+	overflow-y: auto;
+	align-content: center;
+	border: 3px solid #8B0000;
+	box-sizing: border-box;
+}
+.player {
+	text-align: center;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 26px;
+	padding: 7px 0px;
+	word-wrap: break-word;
+	background: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+	border-radius: 10px;
+	outline: none;
+	-webkit-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+	box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+}
+
+.player:active {
+	padding: 10px 0;
+}
+
+.lobby_sign {
+	font-weight: bold;
+	font-size: 25px;
+	margin: 7px;
+}
+.logout_button {
+	font-size: 26px;
+	padding: 7px;
+	outline: none;
+	margin-left: 94%;
+	background: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+}
+.leave_game {
+	margin-left: 90%;
+	font-size: 24px;
+	color: white;
+	text-decoration: none;
+}
+.top_ten {
+	background-color: #505050;
+	margin-left: 10px;
+	width: 200px;
+	height: 500px;
+	align-content: center;
+	position: absolute;
+	background-image: url("/resources/top_ten_players_border.jpg");
+	background-size: 200px 500px;
+	overflow-y: auto;
+	align-content: center;
+}
+.top_ten_sign {
+	font-size: 24px;
+	margin: 25px;
+}
+.top_ten_players_logins {
+	font-size: 15px;
+	margin: 25px;
+}

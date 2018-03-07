@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Balloon</title>
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		#balloon {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			border-radius: 50%;
+		}
+	</style>
+	<script type="text/javascript">
+		let	deflate_active = true;
+		let	palette = ['red', 'green', 'blue'];
+		let	it = 0;
+
+		function deflate() {
+			setInterval(function(){
+				if (deflate_active === true) {
+					let	balloon = document.getElementById("balloon");
+					let	balloon_size = balloon.clientWidth;
+
+					if (balloon_size > 200) {
+						balloon.style.width = balloon_size - 5 + "px";
+						balloon.style.height = balloon_size - 5 + "px";
+						it = Math.abs(it);
+						balloon.style.backgroundColor = palette[it--];
+						if (it < 0) {
+							it = 2;
+						}
+					}
+				}
+			}, 1000);
+		}
+		
+		function blow(balloon) {
+			let	balloon_size = balloon.clientWidth;
+
+			balloon_size += 10;
+			if (balloon_size < 420) {
+				balloon.style.width = balloon_size + "px";
+				balloon.style.height = balloon_size + "px";
+				balloon.style.backgroundColor = palette[++it];
+				if (it > 1) {
+					it = -1;
+				}
+			} else {
+				it = 0;
+				balloon.style.backgroundColor = 'red';
+				balloon.style.width = 200 + "px";
+				balloon.style.height = 200 + "px";
+			}
+		}
+	</script>
+	<body onload="deflate();">
+		<div id="balloon" onclick="blow(this)" onmouseover="deflate_active = false;" onmouseout="deflate_active = true;"></div>
+	</body>
+</html>

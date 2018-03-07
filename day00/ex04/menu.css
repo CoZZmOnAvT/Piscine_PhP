@@ -1,0 +1,63 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   menu.css                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/01/15 20:46:12 by pgritsen          #+#    #+#             */
+/*   Updated: 2018/01/15 21:38:06 by pgritsen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 15px;
+	background-color: grey;
+}
+
+.dropdown {
+	background-color: #ffffff;
+	color: #757574;
+	font: 16px Tahoma;
+	padding: 15px;
+	margin: 5px;
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.dropdown:hover .dropdown-body {
+	max-height: 800px;
+	padding-top: 10px;
+}
+
+.dropdown .dropdown-header::after {
+	vertical-align: middle;
+	content: ' \021A9';
+}
+
+.dropdown .dropdown-body {
+	box-sizing: border-box;
+	top: 100%;
+	left: 0;
+	max-height: 0;
+	width: 100%;
+	list-style: none;
+	position: absolute;	
+	overflow: hidden;
+	background-color: #ef9b7d;
+	transition: 0.25s ease-out;
+	color: #ffffff;
+	font: 15px Tahoma;
+}
+
+.dropdown .dropdown-body li {
+	display: block;
+	padding: 5px 5px 5px 25px;
+	border-bottom: 2px solid #e99577;
+}

@@ -1,0 +1,240 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.css                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/01/15 21:53:58 by pgritsen          #+#    #+#             */
+/*   Updated: 2018/01/16 00:05:31 by pgritsen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+* {
+	margin: 0;
+	padding: : 0;
+}
+
+body {
+	background-color: #505050;
+}
+
+#page-wrapper {
+	min-width: 1400px;
+	margin: 0 auto;
+}
+
+#lenny-face {
+	position: absolute;
+	width: 200px;
+	left: calc(50% - 100px);
+	top: -130px;
+	transition: 0.5s linear;
+	z-index: 10;
+}
+
+#leny-face img {
+	width: 100%;
+}
+
+#anwser-msg {
+	display: none;
+	position: absolute;
+	background-color: #88ff89;
+	border-radius: 10px;
+	padding: 20px;
+	text-align: center;
+	z-index: 9;
+	left: calc(50% - 100px);
+	top: 200px;
+	-webkit-box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+	-moz-box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+	box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+}
+
+#anwser-msg #towel-img {
+	display: none;
+}
+
+#anwser-msg #wrong, #anwser-msg #msg{
+	display: none;
+	color: red;
+	font: bold 48px Impact;
+}
+
+#anwser-msg #correct {
+	display: none;
+	color: green;
+	font: bold 48px Tahoma;
+}
+
+#main-header {
+	position: relative;
+	background-color: #909090;
+	border-radius: 10px;
+	width: 75%;
+	margin: 18px auto;
+	padding: 10px;
+	box-sizing: border-box;
+	height: 137px;
+	-webkit-box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+	-moz-box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+	box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+}
+
+#main-header .logo {
+	width: 427px;
+}
+
+#main-header .loupe {
+	position: absolute;
+	width: 254px;
+	top: 10px;
+	right: 33px;
+}
+
+#main-header .reload {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 20px;
+}
+
+#main-header .close {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	width: 20px;
+}
+
+#content {
+	position: relative;
+	width: 73.5%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+#content > div {
+	background-color: #909090;
+	margin: 0 15px;
+	border-radius: 10px;
+	-webkit-box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+	-moz-box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+	box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+}
+
+#content #popup {
+	display: none;
+	position: absolute;
+	background-color: #88ff89;
+	border-radius: 10px;
+	width: 36%;
+	height: 80px;
+	padding: 40px;
+	top: 86%;
+	left: -77px;
+	z-index: 9;
+	-webkit-box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+	-moz-box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+	box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+}
+
+#content #popup .close {
+	border: 1px solid red;
+	cursor: pointer;
+	position: absolute;
+	left: -10px;
+	top: -10px;
+	padding: 2px;
+	border-radius: 50%;
+	background-color: #ffffff;
+}
+
+#content #popup p {
+	font: 17px Verdana;
+}
+
+#content #popup .ugly-shadow {
+	text-shadow: 4px 4px 4px rgb(255, 0, 0);
+}
+
+#content #popup input[type="text"] {
+	width: 70%;
+	margin: 0;
+	height: 15px;
+}
+
+#content #popup input[type="submit"] {
+	width: 20%;
+	margin-left: 8px;
+	border-radius: 0;
+	height: 20px;
+}
+
+#content .main {
+	position: relative;
+	padding: 10px;
+}
+
+#content .main #chair {
+	position: absolute;
+	width: 140px;
+	height: 220px;
+	left: 32%;
+	top: 57%;
+}
+
+#content .main #monitor {
+	position: absolute;
+	width: 190px;
+	height: 150px;
+	right: 3%;
+	bottom: 20%;
+}
+
+#content .main img {
+	width: 100%;
+}
+
+#content .side-bar {
+	width: 140px;
+	height: 400px;
+	text-align: center;
+	padding: 15px 0;
+}
+
+#content .side-bar ul {
+	list-style: none;
+	padding: 0;
+}
+
+#content .side-bar img {
+	margin: 2px 0;
+	transition: 0.1s linear;
+}
+
+#content .side-bar li:hover img {
+	border: 4px solid red;
+	cursor: pointer;
+}
+
+#content .left-side img {
+	width: 70px;
+	height: 70px;
+}
+
+#content .right-side #brick-wall {
+	background: url(resources/brick.jpg);
+	width: 87%;
+	height: 70px;
+	margin: 0 auto;
+	transition: 0.1s linear;
+}
+
+#content .right-side #brick-wall:hover {
+	border: 4px solid red;
+	cursor: pointer;
+}
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>TO DO</title>
+		<style type="text/css">
+			#ft_list {
+				position: relative;
+				padding: 20px;
+				border: 1px solid black;
+			}
+
+			#ft_list #new {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 60px;
+				height: 30px;
+				cursor: pointer;
+				text-transform: uppercase;
+				font: 16px Tahoma;
+				outline: none;
+			}
+
+			#ft_list header {
+				width: 100%;
+				text-align: center;
+				margin-bottom: 10px;
+			}
+
+			#ft_list > .todo::before {
+				content: " - ";
+			}
+
+			#ft_list > .todo {
+				cursor: pointer;
+				border-bottom: 1px solid grey;
+			}
+
+		</style>
+	</head>
+	<body onload="getTODO();">		
+		<div id="ft_list">
+			<button id="new" onclick="addTODO();">New</button>
+			<header>TO DO list</header>
+		</div>
+		<script type="text/javascript" src="todo.js"></script>
+	</body>
+</html>

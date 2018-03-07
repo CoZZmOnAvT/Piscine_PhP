@@ -1,0 +1,957 @@
+<!--
+                                                          :::      ::::::::
+     mendeleiev.html                                    :+:      :+:    :+:
+                                                      +:+ +:+         +:+
+     By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+
+                                                  +#+#+#+#+#+   +#+
+     Created: 2018/01/15 15:49:47 by pgritsen          #+#    #+#
+     Updated: 2018/01/15 17:03:35 by pgritsen         ###   ########.fr
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Periodic table</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no">
+	</head>
+	<body>
+		<style type="text/css">
+			#title {
+				text-align: center;
+				font: 28px Tahoma;
+				position: relative;
+			}
+
+			#periodic-table {
+				width: 1400px;
+				margin: 0 auto;
+				padding: 0;
+				position: relative;
+			}
+
+			#periodic-table #logo {
+				top: 5px;
+				left: 30%;
+				position: absolute;
+				width: 240px;
+				height: 240px;
+				background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKdLZfH_kqD8BS0yISqyEr7lp9Md9wivf4AcLpmk88aiDou_T7GQ);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			#periodic-table li {
+				list-style: none;
+				display: flex;
+			}
+
+			#periodic-table #color-table {
+				justify-content: space-around;
+			}
+
+			#periodic-table .element {
+				position: relative;
+				display: inline-flex;
+				flex-direction: column;
+				margin: 3px;
+				padding: 8px;
+				text-align: center;
+				width: 5.13%;
+				height: 80px;
+				border: 1px solid black;
+				box-sizing: border-box;
+			}
+
+			#periodic-table .element .index {
+				font-size: 10px;
+				position: absolute;
+				padding: 0;
+				margin: 0;
+				left: 5px;
+				bottom: 5px;
+			}
+
+			#periodic-table .element > p {
+				margin: 0!important;
+				font: bold 10px Tahoma;
+				padding: 10px 0!important;
+			}
+
+			#periodic-table .element > h3,
+			#periodic-table .element > h6 {
+				padding: 0!important;
+				margin: 0!important;
+			}
+
+			#periodic-table .element > h3 {
+				font-weight: bold;
+				padding: 10px 0!important;
+			}
+
+			#periodic-table .element > h6 {
+				font-size: 8px;
+			}
+
+			#periodic-table .element > h6:last-child {
+				position: absolute;
+				right: 5px;
+				top: 5px;
+			}
+
+			#periodic-table .delim {
+				flex: auto;
+				text-align: right;
+				padding: 10px;
+				font: bold italic 12px Tahoma;
+			}
+
+			#periodic-table .element.al_m {
+				border-color: #f58f9e;
+				background-color: #f6a9c1;
+			}
+
+			#periodic-table .element.al_e {
+				border-color: #faaa77;
+				background-color: #ffdca9;
+			}
+
+			#periodic-table .element.tr_m {
+				border-color: #fcf7aa;
+				background-color: #fefcdc;
+			}
+
+			#periodic-table .element.b_m {
+				border-color: #96d1a9;
+				background-color: #d4ebd8;
+			}
+
+			#periodic-table .element.sm_m {
+				border-color: #4dcaf1;
+				background-color: #93d9f5;
+			}
+
+			#periodic-table .element.n_m {
+				border-color: #8ea9d9;
+				background-color: #c0d8f1;
+			}
+
+			#periodic-table .element.hl {
+				border-color: #a2a2d1;
+				background-color: #e0e0f0;
+			}
+
+			#periodic-table .element.n_gas {
+				border-color: #ac92c5;
+				background-color: #e1cfe5;
+			}
+
+			#periodic-table .element.lth {
+				border-color: #c4a398;
+				background-color: #e7dad4;
+			}
+
+			#periodic-table .element.act {
+				border-color: #e2ad9e;
+				background-color: #f4dcd4;
+			}
+		</style>
+		<div id="title">
+			<p>Periodic table of the elements</p>			
+		</div>
+		<ul id="periodic-table">
+			<div id="logo"></div>
+			<li>
+				<div class="element n_m">
+					<div class="index">1</div>
+					<h3>H</h3>
+					<h6>Hydrogenum</h6>
+					<h6>1.008</h6>
+				</div>
+				<div class="delim"></div>
+				<div class="element n_gas">
+					<div class="index">2</div>
+					<h3>He</h3>
+					<h6>Helium</h6>
+					<h6>4.003</h6>
+				</div>
+			</li>
+			<li>
+				<div class="element al_m">
+					<div class="index">3</div>
+					<h3>Li</h3>
+					<h6>Lithium</h6>
+					<h6>6.941</h6>
+				</div>
+				<div class="element al_e">
+					<div class="index">4</div>
+					<h3>Be</h3>
+					<h6>Berylium</h6>
+					<h6>9.012</h6>
+				</div>
+				<div class="delim"></div>
+				<div class="element sm_m">
+					<div class="index">5</div>
+					<h3>B</h3>
+					<h6>Boron</h6>
+					<h6>10.81</h6>
+				</div>
+				<div class="element n_m">
+					<div class="index">6</div>
+					<h3>C</h3>
+					<h6>Carbon</h6>
+					<h6>12.011</h6>
+				</div>
+				<div class="element n_m">
+					<div class="index">7</div>
+					<h3>N</h3>
+					<h6>Nitrogen</h6>
+					<h6>14.007</h6>
+				</div>
+				<div class="element n_m">
+					<div class="index">8</div>
+					<h3>O</h3>
+					<h6>Oxygen</h6>
+					<h6>15.999</h6>
+				</div>
+				<div class="element hl">
+					<div class="index">9</div>
+					<h3>F</h3>
+					<h6>Fluorine</h6>
+					<h6>18.998</h6>
+				</div>
+				<div class="element n_gas">
+					<div class="index">10</div>
+					<h3>Ne</h3>
+					<h6>Neon</h6>
+					<h6>20.180</h6>
+				</div>
+			</li>
+			<li>
+				<div class="element al_m">
+					<div class="index">11</div>
+					<h3>Na</h3>
+					<h6>Sodium</h6>
+					<h6>22.990</h6>
+				</div>
+				<div class="element al_e">
+					<div class="index">12</div>
+					<h3>Mg</h3>
+					<h6>Magnesium</h6>
+					<h6>24.205</h6>
+				</div>
+				<div class="delim"></div>
+				<div class="element b_m">
+					<div class="index">13</div>
+					<h3>Al</h3>
+					<h6>Aluminium</h6>
+					<h6>26.982</h6>
+				</div>
+				<div class="element sm_m">
+					<div class="index">14</div>
+					<h3>Si</h3>
+					<h6>Silicon</h6>
+					<h6>28.085</h6>
+				</div>
+				<div class="element n_m">
+					<div class="index">15</div>
+					<h3>P</h3>
+					<h6>Phosphorus</h6>
+					<h6>30.974</h6>
+				</div>
+				<div class="element n_m">
+					<div class="index">16</div>
+					<h3>S</h3>
+					<h6>Sulfur</h6>
+					<h6>32.06</h6>
+				</div>
+				<div class="element hl">
+					<div class="index">17</div>
+					<h3>Cl</h3>
+					<h6>Chlorine</h6>
+					<h6>35.45</h6>
+				</div>
+				<div class="element n_gas">
+					<div class="index">18</div>
+					<h3>Ar</h3>
+					<h6>Argon</h6>
+					<h6>39.984</h6>
+				</div>
+			</li>
+			<li>
+				<div class="element al_m">
+					<div class="index">19</div>
+					<h3>K</h3>
+					<h6>Potassium</h6>
+					<h6>39.098</h6>
+				</div>
+				<div class="element al_e">
+					<div class="index">20</div>
+					<h3>Ca</h3>
+					<h6>Calcium</h6>
+					<h6>40.078</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">21</div>
+					<h3>Sc</h3>
+					<h6>Scandium</h6>
+					<h6>44.956</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">22</div>
+					<h3>Ti</h3>
+					<h6>Titanium</h6>
+					<h6>47.867</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">23</div>
+					<h3>V</h3>
+					<h6>Vanadium</h6>
+					<h6>50.942</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">24</div>
+					<h3>Cr</h3>
+					<h6>Chromium</h6>
+					<h6>51.996</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">25</div>
+					<h3>Mn</h3>
+					<h6>Manganese</h6>
+					<h6>54.938</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">26</div>
+					<h3>Mn</h3>
+					<h6>Manganese</h6>
+					<h6>54.938</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">27</div>
+					<h3>Co</h3>
+					<h6>Cobalt</h6>
+					<h6>58.933</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">28</div>
+					<h3>Ni</h3>
+					<h6>Nickel</h6>
+					<h6>58.693</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">29</div>
+					<h3>Cu</h3>
+					<h6>Copper</h6>
+					<h6>63.546</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">30</div>
+					<h3>Zn</h3>
+					<h6>Zinc</h6>
+					<h6>63.38</h6>
+				</div>
+				<div class="element b_m">
+					<div class="index">31</div>
+					<h3>Ga</h3>
+					<h6>Gallium</h6>
+					<h6>69.723</h6>
+				</div>
+				<div class="element sm_m">
+					<div class="index">32</div>
+					<h3>Ge</h3>
+					<h6>Germanium</h6>
+					<h6>72.630</h6>
+				</div>
+				<div class="element sm_m">
+					<div class="index">33</div>
+					<h3>As</h3>
+					<h6>Arsenic</h6>
+					<h6>74.922</h6>
+				</div>
+				<div class="element n_m">
+					<div class="index">34</div>
+					<h3>Se</h3>
+					<h6>Selenium</h6>
+					<h6>78.971</h6>
+				</div>
+				<div class="element hl">
+					<div class="index">35</div>
+					<h3>Br</h3>
+					<h6>Bromine</h6>
+					<h6>79.904</h6>
+				</div>
+				<div class="element n_gas">
+					<div class="index">36</div>
+					<h3>Kr</h3>
+					<h6>Krypton</h6>
+					<h6>83.798</h6>
+				</div>
+			</li>
+			<li>
+				<div class="element al_m">
+					<div class="index">37</div>
+					<h3>Rb</h3>
+					<h6>Rubidium</h6>
+					<h6>85.468</h6>
+				</div>
+				<div class="element al_e">
+					<div class="index">38</div>
+					<h3>Sr</h3>
+					<h6>Strontium</h6>
+					<h6>87.62</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">39</div>
+					<h3>Y</h3>
+					<h6>Yttrium</h6>
+					<h6>88.906</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">40</div>
+					<h3>Zr</h3>
+					<h6>Zircoinium</h6>
+					<h6>91.224</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">41</div>
+					<h3>Nb</h3>
+					<h6>Niobium</h6>
+					<h6>92.906</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">42</div>
+					<h3>Mo</h3>
+					<h6>Molybdenum</h6>
+					<h6>95.95</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">43</div>
+					<h3>Tc</h3>
+					<h6>Technetium</h6>
+					<h6>98.907</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">44</div>
+					<h3>Ru</h3>
+					<h6>Ruthenium</h6>
+					<h6>101.07</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">45</div>
+					<h3>Rh</h3>
+					<h6>Rhodium</h6>
+					<h6>102.91</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">46</div>
+					<h3>Pd</h3>
+					<h6>Palladium</h6>
+					<h6>106.42</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">47</div>
+					<h3>Ag</h3>
+					<h6>Silver</h6>
+					<h6>107.87</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">48</div>
+					<h3>Cd</h3>
+					<h6>Cadmium</h6>
+					<h6>112.41</h6>
+				</div>
+				<div class="element b_m">
+					<div class="index">49</div>
+					<h3>In</h3>
+					<h6>Indium</h6>
+					<h6>114.82</h6>
+				</div>
+				<div class="element b_m">
+					<div class="index">50</div>
+					<h3>Sn</h3>
+					<h6>Tin</h6>
+					<h6>118.71</h6>
+				</div>
+				<div class="element sm_m">
+					<div class="index">51</div>
+					<h3>Sb</h3>
+					<h6>Antimony</h6>
+					<h6>121.76</h6>
+				</div>
+				<div class="element sm_m">
+					<div class="index">52</div>
+					<h3>Te</h3>
+					<h6>Tellurim</h6>
+					<h6>127.60</h6>
+				</div>
+				<div class="element hl">
+					<div class="index">53</div>
+					<h3>I</h3>
+					<h6>Iodine</h6>
+					<h6>126.90</h6>
+				</div>
+				<div class="element n_gas">
+					<div class="index">54</div>
+					<h3>Xe</h3>
+					<h6>Xenon</h6>
+					<h6>131.29</h6>
+				</div>
+			</li>
+			<li>
+				<div class="element al_m">
+					<div class="index">55</div>
+					<h3>Cs</h3>
+					<h6>Caesium</h6>
+					<h6>132.91</h6>
+				</div>
+				<div class="element al_e">
+					<div class="index">56</div>
+					<h3>Ba</h3>
+					<h6>Barium</h6>
+					<h6>137.33</h6>
+				</div>
+				<div class="element lth">
+					<div class="index"></div>
+					<h3>57-71</h3>
+					<h6>Lanthanoids</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">72</div>
+					<h3>Hf</h3>
+					<h6>Hafnium</h6>
+					<h6>178.49</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">73</div>
+					<h3>Ta</h3>
+					<h6>Tantalum</h6>
+					<h6>180.95</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">74</div>
+					<h3>W</h3>
+					<h6>Tungsten</h6>
+					<h6>183.84</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">75</div>
+					<h3>Re</h3>
+					<h6>Rhenium</h6>
+					<h6>186.21</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">76</div>
+					<h3>Os</h3>
+					<h6>Osmium</h6>
+					<h6>190.23</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">77</div>
+					<h3>Ir</h3>
+					<h6>Iridium</h6>
+					<h6>192.22</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">78</div>
+					<h3>Pt</h3>
+					<h6>Platinum</h6>
+					<h6>195.08</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">79</div>
+					<h3>Au</h3>
+					<h6>Gold</h6>
+					<h6>196.97</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">80</div>
+					<h3>Hg</h3>
+					<h6>Mercury</h6>
+					<h6>200.59</h6>
+				</div>
+				<div class="element b_m">
+					<div class="index">81</div>
+					<h3>Tl</h3>
+					<h6>Thallium</h6>
+					<h6>204.38</h6>
+				</div>
+				<div class="element b_m">
+					<div class="index">82</div>
+					<h3>Pb</h3>
+					<h6>Lead</h6>
+					<h6>207.2</h6>
+				</div>
+				<div class="element b_m">
+					<div class="index">83</div>
+					<h3>Bi</h3>
+					<h6>Bismuth</h6>
+					<h6>208.98</h6>
+				</div>
+				<div class="element sm_m">
+					<div class="index">84</div>
+					<h3>Po</h3>
+					<h6>Polonium</h6>
+					<h6>208.982</h6>
+				</div>
+				<div class="element hl">
+					<div class="index">85</div>
+					<h3>At</h3>
+					<h6>Astatine</h6>
+					<h6>209.987</h6>
+				</div>
+				<div class="element n_gas">
+					<div class="index">86</div>
+					<h3>Rn</h3>
+					<h6>Radon</h6>
+					<h6>222.018</h6>
+				</div>
+			</li>
+			<li>
+				<div class="element al_m">
+					<div class="index">87</div>
+					<h3>Fr</h3>
+					<h6>Francium</h6>
+					<h6>223.020</h6>
+				</div>
+				<div class="element al_e">
+					<div class="index">88</div>
+					<h3>Ra</h3>
+					<h6>Radium</h6>
+					<h6>226.025</h6>
+				</div>
+				<div class="element act">
+					<div class="index"></div>
+					<h3>89-103</h3>
+					<h6>Actinoids</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">104</div>
+					<h3>Rf</h3>
+					<h6>Rutherfordium</h6>
+					<h6>[261]</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">105</div>
+					<h3>Db</h3>
+					<h6>Dubnium</h6>
+					<h6>[262]</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">106</div>
+					<h3>Sg</h3>
+					<h6>Seaborgium</h6>
+					<h6>[266]</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">107</div>
+					<h3>Bh</h3>
+					<h6>Bohrium</h6>
+					<h6>[268]</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">108</div>
+					<h3>Hs</h3>
+					<h6>Hassium</h6>
+					<h6>[269]</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">109</div>
+					<h3>Mt</h3>
+					<h6>Meitnerium</h6>
+					<h6>[268]</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">110</div>
+					<h3>Ds</h3>
+					<h6>Darmstadtium</h6>
+					<h6>[269]</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">111</div>
+					<h3>Rg</h3>
+					<h6>Roentgenium</h6>
+					<h6>[272]</h6>
+				</div>
+				<div class="element tr_m">
+					<div class="index">112</div>
+					<h3>Cn</h3>
+					<h6>Copernicium</h6>
+					<h6>[277]</h6>
+				</div>
+				<div class="element b_m">
+					<div class="index">113</div>
+					<h3>Uut</h3>
+					<h6>Ununtrium</h6>
+					<h6>unknown</h6>
+				</div>
+				<div class="element b_m">
+					<div class="index">114</div>
+					<h3>Fl</h3>
+					<h6>Flerovium</h6>
+					<h6>[298]</h6>
+				</div>
+				<div class="element b_m">
+					<div class="index">115</div>
+					<h3>Uup</h3>
+					<h6>Ununpentium</h6>
+					<h6>unknown</h6>
+				</div>
+				<div class="element b_m">
+					<div class="index">116</div>
+					<h3>Lv</h3>
+					<h6>Livermorium</h6>
+					<h6>[298]</h6>
+				</div>
+				<div class="element hl">
+					<div class="index">117</div>
+					<h3>Uus</h3>
+					<h6>Ununseptium</h6>
+					<h6>unknown</h6>
+				</div>
+				<div class="element n_gas">
+					<div class="index">118</div>
+					<h3>Uuo</h3>
+					<h6>Ununoctium</h6>
+					<h6>unknown</h6>
+				</div>
+			</li>
+		</ul>
+		<br />
+		<ul id="periodic-table">
+			<li>
+				<div class="delim">
+					<p>Lanthanide</p>
+					<p>Series</p>
+				</div>
+				<div class="element lth">
+					<div class="index">57</div>
+					<h3>La</h3>
+					<h6>Lanthanum</h6>
+					<h6>138.905</h6>
+				</div>
+				<div class="element lth">
+					<div class="index">58</div>
+					<h3>Ce</h3>
+					<h6>Cerium</h6>
+					<h6>140.116</h6>
+				</div>
+				<div class="element lth">
+					<div class="index">59</div>
+					<h3>Pr</h3>
+					<h6>Praseodymium</h6>
+					<h6>140.908</h6>
+				</div>
+				<div class="element lth">
+					<div class="index">60</div>
+					<h3>Nd</h3>
+					<h6>Neodymium</h6>
+					<h6>144.243</h6>
+				</div>
+				<div class="element lth">
+					<div class="index">61</div>
+					<h3>Pm</h3>
+					<h6>Promethium</h6>
+					<h6>144.913</h6>
+				</div>
+				<div class="element lth">
+					<div class="index">62</div>
+					<h3>Sm</h3>
+					<h6>Samarium</h6>
+					<h6>150.36</h6>
+				</div>
+				<div class="element lth">
+					<div class="index">63</div>
+					<h3>Eu</h3>
+					<h6>Europium</h6>
+					<h6>151.964</h6>
+				</div>
+				<div class="element lth">
+					<div class="index">64</div>
+					<h3>Gd</h3>
+					<h6>Gadolinium</h6>
+					<h6>157.25</h6>
+				</div>
+				<div class="element lth">
+					<div class="index">65</div>
+					<h3>Tb</h3>
+					<h6>Terbium</h6>
+					<h6>158.925</h6>
+				</div>
+				<div class="element lth">
+					<div class="index">66</div>
+					<h3>Dy</h3>
+					<h6>Dysprosium</h6>
+					<h6>162.500</h6>
+				</div>
+				<div class="element lth">
+					<div class="index">67</div>
+					<h3>Ho</h3>
+					<h6>Holmium</h6>
+					<h6>164.930</h6>
+				</div>
+				<div class="element lth">
+					<div class="index">68</div>
+					<h3>Er</h3>
+					<h6>Erbium</h6>
+					<h6>167.259</h6>
+				</div>
+				<div class="element lth">
+					<div class="index">69</div>
+					<h3>Tm</h3>
+					<h6>Thulium</h6>
+					<h6>168.934</h6>
+				</div>
+				<div class="element lth">
+					<div class="index">70</div>
+					<h3>Yb</h3>
+					<h6>Ytterbium</h6>
+					<h6>173.055</h6>
+				</div>
+				<div class="element lth">
+					<div class="index">71</div>
+					<h3>Lu</h3>
+					<h6>Lutetium</h6>
+					<h6>174.967</h6>
+				</div>
+			</li>
+			<li>
+				<div class="delim">
+					<p>Actinide</p>
+					<p>Series</p>
+				</div>
+				<div class="element act">
+					<div class="index">89</div>
+					<h3>Ac</h3>
+					<h6>Actinium</h6>
+					<h6>227.028</h6>
+				</div>
+				<div class="element act">
+					<div class="index">90</div>
+					<h3>Th</h3>
+					<h6>Thorium</h6>
+					<h6>232.038</h6>
+				</div>
+				<div class="element act">
+					<div class="index">91</div>
+					<h3>Pa</h3>
+					<h6>Protactinium</h6>
+					<h6>231.036</h6>
+				</div>
+				<div class="element act">
+					<div class="index">92</div>
+					<h3>U</h3>
+					<h6>Uranium</h6>
+					<h6>238.029</h6>
+				</div>
+				<div class="element act">
+					<div class="index">93</div>
+					<h3>Np</h3>
+					<h6>Neptunium</h6>
+					<h6>237.048</h6>
+				</div>
+				<div class="element act">
+					<div class="index">94</div>
+					<h3>Pu</h3>
+					<h6>Plutonium</h6>
+					<h6>244.064</h6>
+				</div>
+				<div class="element act">
+					<div class="index">95</div>
+					<h3>Am</h3>
+					<h6>Americium</h6>
+					<h6>247.070</h6>
+				</div>
+				<div class="element act">
+					<div class="index">96</div>
+					<h3>Cm</h3>
+					<h6>Curium</h6>
+					<h6>247.070</h6>
+				</div>
+				<div class="element act">
+					<div class="index">97</div>
+					<h3>Bk</h3>
+					<h6>Berkelium</h6>
+					<h6>247.070</h6>
+				</div>
+				<div class="element act">
+					<div class="index">98</div>
+					<h3>Cf</h3>
+					<h6>Californium</h6>
+					<h6>251.080</h6>
+				</div>
+				<div class="element act">
+					<div class="index">99</div>
+					<h3>Es</h3>
+					<h6>Einstenium</h6>
+					<h6>[254]</h6>
+				</div>
+				<div class="element act">
+					<div class="index">100</div>
+					<h3>Fm</h3>
+					<h6>Fermium</h6>
+					<h6>257.095</h6>
+				</div>
+				<div class="element act">
+					<div class="index">101</div>
+					<h3>Md</h3>
+					<h6>Mendelevium</h6>
+					<h6>258.1</h6>
+				</div>
+				<div class="element act">
+					<div class="index">102</div>
+					<h3>No</h3>
+					<h6>Nobelium</h6>
+					<h6>259.101</h6>
+				</div>
+				<div class="element act">
+					<div class="index">103</div>
+					<h3>Lr</h3>
+					<h6>Lawrencium</h6>
+					<h6>[262]</h6>
+				</div>
+			</li>
+		</ul>
+		<br />
+		<ul id="periodic-table">
+			<li id="color-table">
+				<div class="element al_m">
+					<p>Alkali</p>
+					<p>Metal</p>
+				</div>
+				<div class="element al_e">
+					<p>Alkaline</p>
+					<p>Earth</p>
+				</div>
+				<div class="element tr_m">
+					<p>Transition</p>
+					<p>Metal</p>
+				</div>
+				<div class="element b_m">
+					<p>Basic</p>
+					<p>Metal</p>
+				</div>
+				<div class="element sm_m">
+					<p>Semimetal</p>
+				</div>
+				<div class="element n_m">
+					<p>Nonmetal</p>
+				</div>
+				<div class="element hl">
+					<p>Halogen</p>
+				</div>
+				<div class="element n_gas">
+					<p>Noble</p>
+					<p>Gas</p>
+				</div>
+				<div class="element lth">
+					<p>Lanthanide</p>
+				</div>
+				<div class="element act">
+					<p>Actinide</p>
+				</div>
+			</li>
+		</ul>
+	</body>
+</html>

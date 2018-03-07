@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				setInterval(alert("Please, use me..."), 30000);
+
+				let	calculator = $("#calculator");
+				let	resultButton = $(calculator).find('#resultButton');
+
+				$(resultButton).click(function () {
+					let leftNum = $(calculator).find('#leftNum').val();
+					let operation = $(calculator).find('#operation').val();
+					let rightNum = $(calculator).find('#rightNum').val();
+
+					$(calculator).find('#leftNum').val("");
+					$(calculator).find('#rightNum').val("");
+
+					if (leftNum === "" || rightNum === ""
+						|| leftNum % 1 !== 0 || rightNum % 1 !== 0
+						|| leftNum < 0 || rightNum < 0) {
+						alert("Error :(");
+						return ;
+					}
+
+					leftNum = parseInt(leftNum);
+					rightNum = parseInt(rightNum);
+
+					switch (operation)
+					{
+						case 'add':
+							alert(leftNum + rightNum);
+							console.log(leftNum + rightNum);
+							break;
+						case 'sub':
+							alert(leftNum - rightNum);
+							console.log(leftNum - rightNum);
+							break;
+						case 'mult':
+							alert(leftNum * rightNum);
+							console.log(leftNum * rightNum);
+							break;
+						case 'div':
+							if (rightNum == 0) {
+								alert("It’s over 9000!");
+								console.log("It’s over 9000!");
+							} else {
+								alert(leftNum / rightNum);
+								console.log(leftNum / rightNum);
+							}
+							break;
+						case 'mod':
+							if (rightNum == 0) {
+								alert("It’s over 9000!");
+								console.log("It’s over 9000!");
+							} else {
+								alert(leftNum % rightNum);
+								console.log(leftNum % rightNum);
+							}
+							break;
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="calculator">
+			<input id="leftNum" type="text" name="leftNum" placeholder="Only P.I." />
+			<select id="operation">
+				<option value="add">+</option>
+				<option value="sub">-</option>
+				<option value="mult">*</option>
+				<option value="div">/</option>
+				<option value="mod">%</option>
+			</select>
+			<input id="rightNum" type="text" name="rightNum" placeholder="Only P.I." />
+			<input type="submit" name="calc" id="resultButton" value="Try me!">
+		</div>
+	</body>
+</html>

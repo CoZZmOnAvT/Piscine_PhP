@@ -1,0 +1,58 @@
+<!--
+                                                          :::      ::::::::
+     basics.html                                        :+:      :+:    :+:
+                                                      +:+ +:+         +:+
+     By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+
+                                                  +#+#+#+#+#+   +#+
+     Created: 2018/01/15 12:58:12 by pgritsen          #+#    #+#
+     Updated: 2018/01/15 15:53:13 by pgritsen         ###   ########.fr
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Basics</title>
+	</head>
+	<body>
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+				background-color: pink;
+			}
+			#title {
+				text-align: center;
+				color: white;
+			}
+			#shops {
+				display: flex;
+				justify-content: space-between;
+				padding: 0 40px;
+			}
+			#shops > div {
+				text-align: center;
+			}
+			#shops img {
+				border-radius: 40px;
+			}
+			#credits {
+				margin: 0 40px;
+				text-align: right;
+				font: italic 14px monospace;
+			}
+		</style>
+		<h1 id="title">⚠︎ -so bigger- ⚠︎</h1>
+		<div id="shops">
+			<div id="left-shop">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdXrotpyn1ggVT-emESCH1GgOLQPTKRK9TZcCLPa_nI-XxRQFS">
+				<p><a target="_blank" href="https://rozetka.com.ua">Shop number one</a></p>
+			</div>
+			<div id="right-shop">
+				<img src="http://www.butterflybright.com/wp-content/uploads/2013/02/shop-online-button.jpg">
+				<p><a target="_blank" href="http://baryga.com.ua/">Shop number two</a></p>
+			</div>
+		</div>
+		<hr />
+		<p id="credits">ⓒ pgritsen 2018</p>
+	</body>
+</html>

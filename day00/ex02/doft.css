@@ -1,0 +1,180 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   doft.css                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/01/15 16:31:34 by pgritsen          #+#    #+#             */
+/*   Updated: 2018/01/15 19:59:58 by pgritsen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+* {
+	margin: 0;
+	padding: : 0;
+}
+
+body {
+	background-color: #505050;
+}
+
+#page-wrapper {
+	width: 1892px;
+	margin: 0 auto;
+}
+
+#main-header {
+	position: relative;
+	background-color: #909090;
+	border-radius: 10px;
+	width: 75%;
+	margin: 18px auto;
+	padding: 10px;
+	box-sizing: border-box;
+	height: 137px;
+	-webkit-box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+	-moz-box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+	box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+}
+
+#main-header .logo {
+	width: 427px;
+}
+
+#main-header .loupe {
+	position: absolute;
+	width: 254px;
+	top: 10px;
+	right: 33px;
+}
+
+#main-header .reload {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 20px;
+}
+
+#main-header .close {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	width: 20px;
+}
+
+#content {
+	position: relative;
+	width: 73.5%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+#content > div {
+	background-color: #909090;
+	margin: 0 15px;
+	border-radius: 10px;
+	-webkit-box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+	-moz-box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+	box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+}
+
+#content .popup {
+	position: absolute;
+	background-color: #88ff89;
+	border-radius: 10px;
+	width: 36%;
+	height: 150px;
+	padding: 10px;
+	top: 86%;
+	left: -77px;
+	z-index: 9;
+	-webkit-box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+	-moz-box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+	box-shadow: 10px 10px 10px 0px rgb(0,0,0);
+}
+
+#content .popup p {
+	font: 17px Verdana;
+}
+
+#content .popup p big {
+	font-size: 30px;
+}
+
+#content .popup .ugly-shadow {
+	text-shadow: 4px 4px 4px rgb(255, 0, 0);
+}
+
+#content .popup input[type="text"] {
+	width: 75%;
+	margin: 0;
+	height: 15px;
+}
+
+#content .popup input[type="submit"] {
+	width: 15%;
+	margin-left: 8px;
+	border-radius: 0;
+	height: 20px;
+}
+
+#content .main {
+	position: relative;
+	padding: 10px;
+}
+
+#content .main #chair {
+	position: absolute;
+	width: 140px;
+	height: 220px;
+	left: 32%;
+	top: 57%;
+}
+
+#content .main #monitor {
+	position: absolute;
+	width: 190px;
+	height: 150px;
+	right: 3%;
+	bottom: 20%;
+}
+
+#content .main img {
+	width: 100%;
+}
+
+#content .side-bar {
+	width: 140px;
+	height: 400px;
+	text-align: center;
+	padding: 15px 0;
+}
+
+#content .side-bar ul {
+	list-style: none;
+	padding: 0;
+}
+
+#content .side-bar img {
+	margin: 2px 0;
+}
+
+#content .left-side li:nth-child(3) img {
+	border: 4px solid red;
+}
+
+#content .left-side img {
+	width: 70px;
+	height: 70px;
+	cursor: pointer;
+}
+
+#content .right-side #brick-wall {
+	background: url(resources/brick.jpg);
+	width: 87%;
+	height: 70px;
+	margin: 0 auto;
+}

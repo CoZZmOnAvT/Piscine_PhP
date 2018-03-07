@@ -1,0 +1,94 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   responsive.css                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/01/15 17:02:15 by pgritsen          #+#    #+#             */
+/*   Updated: 2018/01/15 20:40:34 by pgritsen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+@media all and (min-width: 800px) and (max-width: 1410px) {
+	#periodic-table #logo {
+		left: 25%;
+		width: 190px;
+		height: 190px;
+	}
+	#periodic-table {
+		width: 800px
+	}
+
+	#periodic-table .element {
+		width: 4.805%;
+		height: 70px;
+	}
+
+	#periodic-table .element > p {
+		font-size: 6px;
+		word-break: break-all;
+	}
+
+	#periodic-table .element small {
+		font-size: 6px;
+		word-break: break-all;
+	}
+
+	#periodic-table .element > h3 {
+		font-size: 14px;
+		padding: 5px 0!important;
+	}
+
+	#periodic-table .element > h6 {
+		font-size: 7px;
+		word-break: break-all;
+	}
+}
+
+@media all and (max-width: 800px) {
+	#periodic-table #logo {
+		left: 25%;
+		width: 120px;
+		height: 120px;
+	}
+
+	#periodic-table {
+		width: 500px
+	}
+
+	#periodic-table .element {
+		width: 4.36%;
+		height: 40px;
+		padding: 6px 0;
+	}
+
+	#periodic-table .element small {
+		display: none;
+		font-size: 4px;
+		word-break: break-all;
+	}
+
+	#periodic-table .element > h3 {
+		font-size: 10px;
+		padding: 5px 0!important;
+	}
+
+	#periodic-table .element > h6 {
+		display: none;
+	}
+
+	#periodic-table .element .index {
+		font-size: 8px;
+		left: 1px;
+		bottom: 1px;
+	}
+
+	#periodic-table #color-table {
+		display: none;
+	}
+
+	#periodic-table .delim {
+		font-size: 6px;
+	}
+}

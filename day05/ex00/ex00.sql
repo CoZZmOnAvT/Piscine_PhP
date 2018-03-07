@@ -1,0 +1,1 @@
+CREATE DATABASE IF NOT EXISTS `db_pgritsen` COLLATE utf8_unicode_ci;

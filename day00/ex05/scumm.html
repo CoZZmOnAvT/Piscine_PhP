@@ -1,0 +1,65 @@
+<!--
+                                                          :::      ::::::::
+     scumm.html                                         :+:      :+:    :+:
+                                                      +:+ +:+         +:+
+     By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+
+                                                  +#+#+#+#+#+   +#+
+     Created: 2018/01/15 21:38:55 by pgritsen          #+#    #+#
+     Updated: 2018/01/16 00:05:20 by pgritsen         ###   ########.fr
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Day of the 42</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<script type="text/javascript" src="game.js"></script>
+	</head>
+	<body>
+		<div id="page-wrapper">
+			<div id="anwser-msg">
+				<img id="towel-img" src="resources/towel.jpeg" />
+				<p id="msg"></p>
+				<p id="wrong">WRONG</p>
+				<p id="correct">Correct!</p>
+			</div>
+			<div id="lenny-face"><img width="200px" src="resources/LennyFace.png" /></div>
+			<header id="main-header">
+				<img class="logo" src="resources/day_of_the_42.png" />
+				<img class="loupe" src="resources/loupe.png" />
+				<a href="http://www.disney.com" target="_blank"><img class="reload" title="Start from the beginning" alt="Start from the beginning" src="resources/reload.png" /></a>
+				<a href="http://www.relaischateaux.com" target="_blank"><img class="close" title="Disconnect" alt="Disconnect" src="resources/close.gif" /></a>
+			</header>
+			<div id="content">
+				<div id="popup">
+					<img onclick="hide_popup()" class="close" title="Disconnect" alt="Disconnect" src="resources/close.gif" />
+					<p class="msg"><i>- Bonjour, vous êtes nouveau ici ?</i></p>
+					<p><input type="text" name="msg" /> <input type="submit" name="submit" value="Anwser" onclick="check_anwser()"></p>
+				</div>
+				<div class="side-bar left-side">
+					<ul>
+						<li><img title="Advance" alt="Advance" src="resources/arrow.png" /></li>
+						<li><img title="Take" alt="Take" src="resources/main.png" /></li>
+						<li><img onclick="bb_watching()" title="Look" alt="Look" src="resources/oeil.png" /></li>
+						<li><img title="Use" alt="Use" src="resources/outil.png" /></li>
+						<li><img onclick="ask_question()" title="Speak" alt="Speak" src="resources/chat-icon.png" /></li>
+					</ul>
+				</div>
+				<div class="main">
+					<a href="http://www.ikea.com" title="chair" id="chair"></a>
+					<a href="http://www.apple.com" title="monitor" id="monitor"></a>
+					<img src="resources/cluster.jpg" />
+				</div>
+				<div class="side-bar right-side">
+					<ul>
+						<li><img onclick="lenny_face()" width="70px" src="resources/book.png" /></li>
+						<li><img onclick="towel_surprise()" width="70px" src="resources/towel.png" /></li>
+						<li><div onclick="wall()" id="brick-wall"></div></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
